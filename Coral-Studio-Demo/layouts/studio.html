@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{site.lang}}" dir="{{site.dir}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{site.theme_color}}">
+  <meta name="description" content="{{site.description}}">
+  <title>{{page.title}} · {{site.name}}</title>
+  <link rel="icon" type="image/png" href="/assets/image/coral-mark.png">
+  <link rel="stylesheet" href="/styles/site.css">
+</head>
+<body class="page page-{{page.page}}">
+  <div class="site-shell">
+    <header class="site-nav">
+      <a class="brand" href="/index.html" aria-label="Coral Studio home"><img src="/assets/image/coral-mark.png" alt=""><span>{{site.name}}</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b>Menu</b></button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="/index.html">Overview</a><a href="/studio.html">The studio</a><a href="/workflow.html">Workflow</a><a href="/about.html">About</a>
+      </nav>
+      <a class="nav-cta" href="/workflow.html">Start exploring <span>↗</span></a>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow"><span></span>{{page.kicker}}</p>
+        <h1>{{page.title}}</h1>
+        <p class="hero-copy">{{page.summary}}</p>
+      </section>
+      <article class="prose"><md></md></article>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="/index.html"><img src="/assets/image/coral-mark.png" alt="">{{site.name}}</a><span>Made for thoughtful work on the web.</span><a href="/about.html">A little about us <span>↗</span></a></footer>
+  </div>
+  <script src="/scripts/site.js"></script>
+</body>
+</html>

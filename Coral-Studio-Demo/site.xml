@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <build output="dist">
+    <copy-files>
+      <copy source="site.json" output="site.json" type="file" />
+      <copy source="assets/" output="assets/" type="directory" />
+      <copy source="styles/site.css" output="styles/site.css" type="style" />
+      <copy source="scripts/site.js" output="scripts/site.js" type="script" />
+    </copy-files>
+    <pages>
+      <page name="about" config="configs/p.about.json" layout="layouts/about.html" content="data/about.md" output="about.html" />
+      <page name="index" config="configs/p.index.json" layout="layouts/index.html" content="data/index.md" output="index.html" />
+      <page name="studio" config="configs/p.studio.json" layout="layouts/studio.html" content="data/studio.md" output="studio.html" />
+      <page name="workflow" config="configs/p.workflow.json" layout="layouts/workflow.html" content="data/workflow.md" output="workflow.html" />
+    </pages>
+  </build>
+</site>

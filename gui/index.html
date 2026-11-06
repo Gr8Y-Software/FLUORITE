@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' http://127.0.0.1:*; img-src 'self' data: file: http://127.0.0.1:*; font-src 'self' data:; worker-src 'self'; frame-src http://127.0.0.1:* about:; connect-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coral Studio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vendor/monaco/monaco.css">
+<link rel="stylesheet" href="markdown.css">
+<link rel="stylesheet" href="editors/markdown.css">
+<link rel="stylesheet" href="struct-view.css">
+<link rel="stylesheet" href="editors/json.css">
+</head>
+<body>
+<div id="app" hidden>
+  <header class="titlebar">
+    <div class="brand"><img id="mark" src="logo.png" alt=""><b id="proj-name">Coral Studio</b></div>
+    <nav class="menubar" id="menubar" aria-label="Menu"></nav>
+    <button class="cmd-trigger" id="open-palette" title="Ctrl K"><span class="cmd-text">Find a file or action</span> <kbd>Ctrl K</kbd></button>
+    <button class="build-btn" id="build-btn" title="Build site" aria-label="Build site"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></svg></button>
+    <div class="titlebar-controls" id="window-controls" hidden><button data-act="window-minimize" title="Minimize" aria-label="Minimize">&#x2212;</button><button data-act="window-maximize" title="Maximize or restore" aria-label="Maximize or restore">&#x25a1;</button><button data-act="window-close" title="Close" aria-label="Close">&#x00d7;</button></div>
+  </header>
+  <nav class="toolbar" id="toolbar" aria-label="View tools"></nav>
+  <nav class="activity" id="activity"></nav>
+  <aside class="explorer" id="explorer-wrap">
+    <div class="ex-tools"><input id="ex-filter" type="search" placeholder="Filter…" aria-label="Filter the explorer" autocomplete="off"><button id="ex-new" title="New…" aria-label="New">+</button></div>
+    <div class="ex-list" id="explorer"></div>
+  </aside>
+  <div class="split-v" id="split-exp"></div>
+  <main class="stage" id="stage">
+    <section class="view" id="v-dashboard"></section>
+    <section class="view" id="v-editor"><div class="tabs" id="tabs"></div><div class="body" id="editor-body"></div></section>
+    <section class="view" id="v-markdown"></section>
+    <section class="view" id="v-config"></section>
+    <section class="view" id="v-structure"></section>
+    <section class="view" id="v-media"></section>
+    <section class="view" id="v-preview"></section>
+    <section class="view" id="v-settings"></section>
+    <section class="view" id="v-app-settings"></section>
+    <div class="split-h" id="split-terminal" hidden></div>
+    <section class="terminal" id="terminal" hidden aria-label="Integrated PowerShell terminal">
+      <header class="terminal-head"><div class="terminal-caption"><span class="terminal-indicator"></span><b>Terminal</b><span class="terminal-cwd" id="terminal-cwd"></span></div><div class="terminal-actions"><select id="terminal-profile" aria-label="PowerShell profile"><option value="powershell">Windows PowerShell</option><option value="pwsh">PowerShell 7</option></select><button data-terminal-action="clear" title="Clear output">Clear</button><button data-terminal-action="restart" title="Restart PowerShell">Restart</button><button data-terminal-action="stop" title="Stop PowerShell">Stop</button><button data-terminal-action="hide" title="Hide terminal">×</button></div></header>
+      <div class="terminal-output" id="terminal-output" role="log" aria-live="polite" aria-label="PowerShell output"></div>
+      <form class="terminal-form" id="terminal-form"><span>PS&gt;</span><textarea id="terminal-input" rows="1" aria-label="PowerShell command" placeholder="Enter a PowerShell command · Enter to run · Shift Enter for a new line" spellcheck="false"></textarea><button type="submit" class="primary">Run</button></form>
+    </section>
+  </main>
+  <footer class="status" id="status"></footer>
+</div>
+
+<div id="overlay" hidden></div>
+<div id="toast"></div>
+<script src="ui.js"></script>
+<script src="vendor/monaco/monaco.js"></script>
+<script src="app.js"></script>
+<script src="editors/workspace.js"></script>
+<script src="editors/code.js"></script>
+<script src="editors/markdown-text.js"></script>
+<script src="editors/markdown.js"></script>
+<script src="struct-view.js"></script>
+<script src="editors/json.js"></script>
+<script src="settings-view.js"></script>
+<script src="boot.js"></script>
+</body>
+</html>

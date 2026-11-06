@@ -1,0 +1,19 @@
+{
+  "name": "coral-studio",
+  "productName": "Coral Studio",
+  "version": "1.0.0",
+  "description": "A general-purpose studio for building and managing static sites.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build:monaco": "node build-monaco.js",
+    "prestart": "npm run build:monaco",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "monaco-editor": "^0.57.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

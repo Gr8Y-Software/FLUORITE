@@ -1,0 +1,28 @@
+{
+  "name": "Coral Studio",
+  "short_name": "Coral",
+  "lang": "en",
+  "dir": "ltr",
+  "description": "A calm, capable workspace for building beautiful static websites.",
+  "tagline": "A calmer way to create for the web.",
+  "theme_color": "#0b1119",
+  "url": "",
+  "logo": "assets/image/coral-mark.png",
+  "icon_512": "",
+  "icon_192": "",
+  "og_image": "",
+  "generators": {
+    "manifest": {
+      "enabled": true
+    },
+    "sitemap": {
+      "enabled": true
+    },
+    "robots": {
+      "enabled": true
+    },
+    "aiContext": {
+      "enabled": true
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "coral-studio",
   "productName": "Coral Studio",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A general-purpose studio for building and managing static sites.",
   "main": "main.js",
   "private": true,
